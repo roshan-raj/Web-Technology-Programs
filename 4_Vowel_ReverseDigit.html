@@ -1,0 +1,40 @@
+<!-- 
+	Develop and demonstrate a HTML5 file that includes JavaScript that uses functions for the following:
+	a)	Parameter: A String
+		Output: The position in the string of the left most vowel.
+	b)	Parameter: A number
+		Output:	The number with its digit in the reverse order.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Checking Vowel & Reversing Number</title>
+	<script type="text/javascript">
+		function findvowel(string) {
+			var index = string.search(/[aeiou]/i);
+			stringOutput.innerText = (index >= 0)? ("Vowel found at position " +(index+1)) : "No vowel found.";
+		}
+		function reverse(n) {
+			var reverse = 0;
+			for(;n!=0;n=Math.floor(n/10))
+				reverse = reverse * 10 + n % 10;
+			numberOutput.innerText = reverse;
+		}
+	</script>
+</head>
+<body>
+	<span style="font-weight: bold;">Enter a String: </span>
+	<input type="text" id="stringInput">
+	<button onclick="findvowel(stringInput.value);">Find Vowel</button>
+	<br>
+	<span style="font-weight: bold;">Output: </span>
+	<div id="stringOutput" style="display: inline;"></div>
+	<br><br>
+	<span style="font-weight: bold;">Enter a Number: </span>
+	<input type="text" id="numberInput">
+	<button onclick="reverse(numberInput.value);">Reverse Number</button>
+	<br>
+	<span style="font-weight: bold;">Output: </span>
+	<div id="numberOutput" style="display: inline;"></div>
+</body>
+</html>
