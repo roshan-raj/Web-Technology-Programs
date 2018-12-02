@@ -1,0 +1,47 @@
+<!-- 
+	Write a JavaScript to design a simple calculator to perform sum, product, difference and quotient operations. 
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Calculator</title>
+	<script type="text/javascript">
+		function compute(operator) {
+			opnd1 = parseFloat(op1.value);
+			opnd2 = parseFloat(op2.value);
+			switch(operator) {
+				case '+' : result.value = opnd1 + opnd2; break;
+				case '-' : result.value = opnd1 - opnd2; break;
+				case '*' : result.value = opnd1 * opnd2; break;
+				case '/' : result.value = opnd1 / opnd2; break;
+			}
+		}
+	</script>
+	<style type="text/css">
+		body {
+			text-align: center;
+		}
+		input {
+			margin: 10px;
+			text-align: center;
+		}
+		input#result {
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<h1>Simple Calculator</h1>
+	<input type="number" id="op1" placeholder="Enter a number"/>
+	<br>
+	<input type="number" id="op2" placeholder="Enter a number"/>
+	<br>
+	<button onclick="compute('+')"> + </button>
+	<button onclick="compute('-')"> - </button>
+	<button onclick="compute('*')"> * </button>
+	<button onclick="compute('/')"> / </button>
+	<br>
+	<input type="text" id="result" readonly=""/>
+	<br>
+</body>
+</html>
