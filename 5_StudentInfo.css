@@ -1,0 +1,53 @@
+student {
+	display: block;
+	border-radius: 25px;
+	width: 400px;
+	margin: 15px;
+	border: #000 thin dashed;
+	padding: 10px;
+	color: #0000CC;
+	background: linear-gradient(red, yellow, orange);
+}
+
+name, yoj, email {
+	display: block;
+	padding-left: 20px;
+}
+
+usn {
+	display: block;
+	border-radius: 25px;
+	width: auto;
+	padding: 8px;
+	background: #900000;
+	color: #FFFFFF;
+	text-align: center;
+	font: bold 12pt Times;
+}
+
+name {
+	color: #990000;
+	font-variant: small-caps;
+}
+
+branch {
+	padding-left: 20px;
+}
+
+name::before 	{ content: "Name: 				" }
+branch::before 	{ content: "Branch & College: 	" }
+branch::after 	{ content: ", 					" }
+yoj::before 	{ content: "Year of Joining:	" }
+email::before 	{ content: "Email: 				" }
+
+student:hover {
+	background: linear-gradient(yellowgreen, yellow, green);
+	width: 405px;
+	border: 2px solid red;
+}
+
+student:hover usn{
+	background: #000088;
+	color: SpringGreen;
+	border: 2px solid white;
+}
