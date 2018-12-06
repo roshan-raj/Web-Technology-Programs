@@ -43,8 +43,8 @@
 		$colcount_a = count($a[0]);
 		$rowcount_b = count($b);
 		$colcount_b = count($b[0]);
-		if($rowcount_a != $rowcount_b || $colcount_a != $colcount_b) {
-			echo "Matrix Order Mismatch";
+		if($colcount_a != $rowcount_b) {
+			echo "Matrix Order Mismatch, Cannot Multiply!";
 			exit(0);
 		}
 		for($i=0; $i<$rowcount_a; $i++)
