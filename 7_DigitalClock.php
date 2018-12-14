@@ -4,6 +4,7 @@
 -->
 <?php
 	function getTime() {
+		date_default_timezone_set("Asia/Kolkata");
 		return date("g:i:s A", time());
 	}
 ?>
